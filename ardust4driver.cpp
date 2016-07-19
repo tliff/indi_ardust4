@@ -160,6 +160,8 @@ bool ARDUST4Driver::stopPulse(int direction)
     if (debug)
         IDLog("stop command value is %s\n", command.c_str());
 
+    rc = write_blocking(command);
+
 
     if (debug)
         IDLog("stopPulse returns %d\n",rc);
