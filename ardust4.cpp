@@ -298,7 +298,7 @@ void ARDUST4::TimerHit()
 
 }
 
-IPState ARDUST4::GuideNorth(float ms)
+IPState ARDUST4::GuideNorth(uint32_t ms)
 {
 
     RemoveTimer(NStimerID);
@@ -329,7 +329,7 @@ IPState ARDUST4::GuideNorth(float ms)
     return IPS_BUSY;
 }
 
-IPState ARDUST4::GuideSouth(float ms)
+IPState ARDUST4::GuideSouth(uint32_t ms)
 {
     RemoveTimer(NStimerID);
 
@@ -358,7 +358,7 @@ IPState ARDUST4::GuideSouth(float ms)
     return IPS_BUSY;
 }
 
-IPState ARDUST4::GuideEast(float ms)
+IPState ARDUST4::GuideEast(uint32_t ms)
 {
     RemoveTimer(WEtimerID);
 
@@ -386,7 +386,7 @@ IPState ARDUST4::GuideEast(float ms)
     return IPS_BUSY;
 }
 
-IPState ARDUST4::GuideWest(float ms)
+IPState ARDUST4::GuideWest(uint32_t ms)
 {
 
     RemoveTimer(WEtimerID);
